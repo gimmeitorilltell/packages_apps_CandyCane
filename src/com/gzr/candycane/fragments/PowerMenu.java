@@ -35,14 +35,15 @@ import com.android.settings.Utils;
 import com.gzr.candycane.preference.CustomSeekBarPreference;
 
 public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+    private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
     private static final String KEY_ADVANCED_REBOOT = "advanced_reboot";
     private static final String POWER_REBOOT_DIALOG_DIM = "power_reboot_dialog_dim";
     private static final String POWER_MENU_ANIMATIONS = "power_menu_animations";
-
     private ListPreference mAdvancedReboot;
     private ListPreference mPowerMenuAnimations;
     private CustomSeekBarPreference mPowerRebootDialogDim;
-
+    private CustomSeekBarPreference mOnTheGoAlphaPref;
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,6 +99,10 @@ public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenc
                     Integer.valueOf((String) newValue));
             mPowerMenuAnimations.setValue(String.valueOf(newValue));
             mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
+        } else if (preference == mOnTheGoAlphaPref) {
+            float val = (Integer) newValue;
+            Settings.System.putFloat(getContentResolver(), Settings.System.ON_THE_GO_ALPHA,
+                    val / 100);
             return true;
         }
         return false;
