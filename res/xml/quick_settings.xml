@@ -29,9 +29,25 @@
             settings:units=""
             android:persistent="false" />
 
+    <org.candyroms.candycane.settings.preference.CustomSeekBarPreference
+         android:key="qs_rows_portrait"
+         android:title="@string/qs_rows_portrait_title"
+         settings:max="7"
+         settings:min="1"
+         settings:units=""
+         android:persistent="false" />
+ 
+     <org.candyroms.candycane.settings.preference.CustomSeekBarPreference
+         android:key="qs_rows_landscape"
+         android:title="@string/qs_rows_landscape_title"
+         settings:max="3"
+         settings:min="1"
+         settings:units=""
+         android:persistent="false" />
+
     </PreferenceCategory>
 
-     <org.candyroms.candycane.settings.preference.SecureSettingSwitchPreference
+     <org.candyroms.candycane.preference.SecureSettingSwitchPreference
             android:key="lockscreen_qs_disabled"
             android:title="@string/lockscreen_qs_disabled_title"
             android:summary="@string/lockscreen_qs_disabled_summary"/>
