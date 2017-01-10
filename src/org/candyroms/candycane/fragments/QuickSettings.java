@@ -75,6 +75,8 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     private ListPreference mQuickPulldown;
     private ListPreference mDaylightHeaderPack;
     private ListPreference mHeaderProvider;
+    private String mDaylightHeaderProvider;
+    private PreferenceScreen mHeaderBrowse;
     private CustomSeekBarPreference mHeaderShadow;
     private PreferenceScreen mHeaderBrowse;
     private String mDaylightHeaderProvider;
@@ -158,7 +160,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
         mHeaderShadow.setOnPreferenceChangeListener(this);
 
         mDaylightHeaderProvider = getResources().getString(R.string.daylight_header_provider);
-        String providerName = Settings.System.getString(resolver,
+        String providerName = Settings.System.getString(getContentResolver(),
                 Settings.System.STATUS_BAR_CUSTOM_HEADER_PROVIDER);
         if (providerName == null) {
             providerName = mDaylightHeaderProvider;
@@ -239,6 +241,13 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
             mHeaderProvider.setSummary(mHeaderProvider.getEntries()[valueIndex]);
             mDaylightHeaderPack.setEnabled(value.equals(mDaylightHeaderProvider));
             return true;
+        } else if (preference == mHeaderProvider) {
+            String value = (String) objValue;
+            Settings.System.putString(getContentResolver(),
+                    Settings.System.STATUS_BAR_CUSTOM_HEADER_PROVIDER, value);
+            int valueIndex = mHeaderProvider.findIndexOfValue(value);
+            mHeaderProvider.setSummary(mHeaderProvider.getEntries()[valueIndex]);
+            mDaylightHeaderPack.setEnabled(value.equals(mDaylightHeaderProvider));
         }
         return false;
     }

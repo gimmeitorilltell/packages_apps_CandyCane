@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--  Copyright (C) 2014-2016 The Dirty Unicorns Project
+					2017 CandyRoms
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -660,6 +661,16 @@
     </string-array>
 
     <!-- QS headers -->
+    <string-array name="custom_header_provider_entries" translatable="false">
+        <item>@string/daylight_header_provider_title</item>
+        <item>@string/static_header_provider_title</item>
+    </string-array>
+
+    <string-array name="custom_header_provider_values" translatable="false">
+        <item>@string/daylight_header_provider</item>
+        <item>@string/static_header_provider</item>
+    </string-array>
+
     <string-array name="custom_header_provider_entries" translatable="false">
         <item>@string/daylight_header_provider_title</item>
         <item>@string/static_header_provider_title</item>
