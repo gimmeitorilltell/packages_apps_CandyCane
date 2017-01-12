@@ -456,6 +456,7 @@
         <item>17</item>
     </string-array>
 
+<<<<<<< HEAD:res/values/arrays.xml
     <!-- PA PIE -->
     <string-array name="entries_pa_pie_size">
         <item>@string/pa_pie_size_small</item>
@@ -623,4 +624,14 @@
         <item>7</item>
     </string-array>
 
+    <!-- QS headers -->
+    <string-array name="custom_header_provider_entries" translatable="false">
+        <item>@string/daylight_header_provider_title</item>
+        <item>@string/static_header_provider_title</item>
+    </string-array>
+
+    <string-array name="custom_header_provider_values" translatable="false">
+        <item>@string/daylight_header_provider</item>
+        <item>@string/static_header_provider</item>
+    </string-array>                   
 </resources>

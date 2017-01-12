@@ -50,13 +50,31 @@
     <string name="statusbar_notifications_category">Notifications</string>
     <string name="statusbar_items_category">Statusbar items</string>
     <string name="recents_category">Recents</string>
-
     <string name="quick_settings_title">Quick Settings</string>
     <string name="quicksettings_category">Quick settings</string>
     <string name="qs_layout_category">QS tiles layout</string>
     <string name="qs_rows_portrait_title">Rows (portrait)</string>
     <string name="qs_rows_landscape_title">Rows (landscape)</string>
     <string name="qs_columns_title">Columns</string>
+
+    <!-- QS headers -->
+    <string name="qs_header_category_title">HEADER SHORTCUTS</string> 
+    <string name="custom_header_category_title">CUSTOM HEADER IMAGE</string> 
+    <string name="qs_header_category">Quick settings header</string>
+    <string name="status_bar_custom_header_title">Custom header image</string>
+    <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
+    <string name="daylight_header_pack_title">Header image pack</string>
+    <string name="daylight_header_pack_summary">Select header pack from a list of packages</string>
+    <string name="status_bar_custom_header_shadow_title">Shadow header image</string>
+    <string name="status_bar_custom_header_shadow_summary">For better visibility on bright images</string>
+    <string name="static_header_provider" translatable="false">static</string>
+    <string name="daylight_header_provider" translatable="false">daylight</string>
+    <string name="static_header_provider_title">Static</string>
+    <string name="daylight_header_provider_title">Dynamic</string>
+    <string name="custom_header_provider_title">Header provider</string>
+    <string name="custom_header_provider_summary">Choose method of header imaging</string>
+    <string name="custom_header_browse_title">Browse installed headers</string>
+    <string name="custom_header_browse_summary">Long press on any image to use for static mode</string> 
 
     <!-- Quick Settings on lockscreen -->
     <string name="lockscreen_qs_disabled_title">Disable quick settings when locked</string>
