@@ -253,6 +253,13 @@
     <string name="status_bar_show_weather_summary">Show the weather in the status bar header</string>
     <string name="weather_cat_statusbar_title">Statusbar</string>
 
+    <!-- Header Weather -->
+    <string name="quicksettings_exp_weather_category">Weather</string>
+    <string name="header_weather_enabled_title">Weather Text</string>
+    <string name="header_weather_enabled_summary">Enable weather info in expanded header</string>
+    <string name="header_weather_image_enabled_title">Weather Image</string>
+    <string name="header_weather_image_enabled_summary">Enable weather image in expanded header</string>
+
     <!-- Lockscreen weather -->
     <string name="display_category_weather_title">Lockscreen weather options</string>
     <string name="lock_screen_weather_settings_title">Weather</string>
