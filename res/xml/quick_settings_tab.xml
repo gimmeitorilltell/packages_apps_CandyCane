@@ -20,7 +20,7 @@
 
   <Preference
     android:key="quicksettings"
-    android:fragment="org.candyroms.candycan.settings.fragments.QuickSettings"
+    android:fragment="org.candyroms.candycane.settings.fragments.QuickSettings"
     android:title="@string/quicksettings_category" />
 
 </PreferenceScreen>
