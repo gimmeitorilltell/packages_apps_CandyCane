@@ -48,6 +48,14 @@
     </PreferenceCategory>
 
      <org.candyroms.candycane.preference.SecureSettingSwitchPreference
+         android:key="sysui_qqs_count_key"
+         android:title="@string/qs_small_tiles_title"
+         settings:max="8"
+         settings:min="3"
+         settings:units=""
+         android:persistent="false" />
+
+     <org.candyroms.candycane.preference.SecureSettingSwitchPreference
             android:key="lockscreen_qs_disabled"
             android:title="@string/lockscreen_qs_disabled_title"
             android:summary="@string/lockscreen_qs_disabled_summary"/>

@@ -54,7 +54,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
     private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
     private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
-    private static final String PREF_SYSUI_QQS_COUNT = "sysui_qqs_count_key";
     private static final String QUICK_PULLDOWN = "quick_pulldown";
 
     private CustomSeekBarPreference mSysuiQqsCount;

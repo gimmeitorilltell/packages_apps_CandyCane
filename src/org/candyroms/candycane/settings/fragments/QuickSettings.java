@@ -42,7 +42,7 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.Utils;
 
- import org.candyroms.candycane.settings.preference.CustomSeekBarPreference;
+import org.candyroms.candycane.settings.preference.CustomSeekBarPreference;
 
 public class QuickSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
@@ -50,10 +50,12 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     private static final String PREF_LOCK_QS_DISABLED = "lockscreen_qs_disabled";
     private static final String PREF_ROWS_PORTRAIT = "qs_rows_portrait";
     private static final String PREF_ROWS_LANDSCAPE = "qs_rows_landscape";
+    private static final String PREF_SYSUI_QQS_COUNT = "sysui_qqs_count_key";
 
     private CustomSeekBarPreference mQsColumns;
     private CustomSeekBarPreference mRowsPortrait;
     private CustomSeekBarPreference mRowsLandscape;
+    private CustomSeekBarPreference mSysuiQqsCount;
     private SwitchPreference mLockQsDisabled;
 
     private static final int MY_USER_ID = UserHandle.myUserId();
@@ -62,7 +64,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.quicksettings);
+        addPreferencesFromResource(R.xml.quick_settings);
 
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefSet = getPreferenceScreen();
@@ -97,6 +99,12 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
         } else {
             prefSet.removePreference(mLockQsDisabled);
         }
+        
+        mSysuiQqsCount = (CustomSeekBarPreference) findPreference(PREF_SYSUI_QQS_COUNT);
+         int SysuiQqsCount = Settings.Secure.getInt(getContentResolver(),
+                 Settings.Secure.QQS_COUNT, 6);
+         mSysuiQqsCount.setValue(SysuiQqsCount / 1);
+         mSysuiQqsCount.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -135,6 +143,11 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
              Settings.System.putInt(getActivity().getContentResolver(),
                      Settings.System.QS_ROWS_LANDSCAPE, rowsLandscape * 1);
              return true;
+        } else if (preference == mSysuiQqsCount) {
+             int SysuiQqsCount = (Integer) objValue;
+             Settings.Secure.putInt(getActivity().getContentResolver(),
+                     Settings.Secure.QQS_COUNT, SysuiQqsCount * 1);
+              return true;
         }
         return false;
     }
