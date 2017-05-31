@@ -13,50 +13,59 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+ 
 package org.candyroms.candycane.tabs;
-
+ 
 import android.content.Context;
 import android.content.ContentResolver;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.preference.ListPreference;
-import android.preference.SwitchPreference;
-import android.preference.Preference;
+import android.support.v7.preference.ListPreference;
+import android.support.v14.preference.SwitchPreference;
+import android.support.v7.preference.Preference;
 import android.preference.PreferenceCategory;
-import android.preference.PreferenceScreen;
-import android.preference.Preference.OnPreferenceChangeListener;
+import android.support.v7.preference.PreferenceScreen;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
-
+ 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.Utils;
-
+ 
 public class Lockscreen extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "Lockscreen";
-
+    private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
+ 
+    private ListPreference mLockClockFonts;
+ 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+ 
         addPreferencesFromResource(R.xml.lockscreen);
-
+ 
         ContentResolver resolver = getActivity().getContentResolver();
-    }
-
+ 
+        mLockClockFonts = (ListPreference) findPreference(LOCK_CLOCK_FONTS);
+        mLockClockFonts.setValue(String.valueOf(Settings.System.getInt(
+                resolver, Settings.System.LOCK_CLOCK_FONTS, 4)));
+        mLockClockFonts.setSummary(mLockClockFonts.getEntry());
+        mLockClockFonts.setOnPreferenceChangeListener(this);
+        }
+ 
     @Override
     protected int getMetricsCategory() {
         return MetricsEvent.CANDYCANE;
     }
-
+ 
     @Override
     public void onResume() {
         super.onResume();
     }
-
+ 
     @Override
     public void onPause() {
         super.onPause();
@@ -66,5 +75,4 @@ public class Lockscreen extends SettingsPreferenceFragment implements
         final String key = preference.getKey();
         return true;
     }
-
 }
