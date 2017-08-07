@@ -61,12 +61,6 @@
          android:persistent="false"
          android:dependency="status_bar_custom_header" />
 
-     <org.candyroms.candycane.preference.SystemSettingSwitchPreference
-         android:key="qs_quickbar_scroll_enabled"
-         android:title="@string/qqs_scroll_title"
-         android:summary="@string/qqs_scroll_summary"
-         android:defaultValue="false"/>
-
     <org.candyroms.candycane.preference.SecureSettingSwitchPreference
         android:key="qs_show_brightness"
         android:title="@string/qs_brightness_slider_title"
@@ -174,6 +168,12 @@
             android:title="@string/qs_date_time_center_title"
             android:summary="@string/qs_date_time_center_summary"
             android:defaultValue="false" />
+        
+        <org.candyroms.candycane.preference.SystemSettingSwitchPreference
+            android:key="qs_quickbar_scroll_enabled"
+            android:title="@string/qqs_scroll_title"
+            android:summary="@string/qqs_scroll_summary"
+            android:defaultValue="false"/>
 
     <PreferenceCategory
         android:key="qs_layout_category"
@@ -243,14 +243,6 @@
         android:summaryOn="@string/qs_tile_title_visibility_summary_on"
         android:summaryOff="@string/qs_tile_title_visibility_summary_off"
         android:defaultValue="true"/>
-
-    <org.candyroms.candycane.preference.CustomSeekBarPreference
-        android:key="sysui_qqs_count_key"
-        android:title="@string/qs_small_tiles_title"
-        settings:max="8"
-        settings:min="3"
-        settings:units=""
-        android:persistent="false" />
 
     </PreferenceCategory>
 
