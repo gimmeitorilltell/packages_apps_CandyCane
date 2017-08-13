@@ -525,6 +525,7 @@
     <string name="status_bar_custom_header_title">Use custom header image</string>
     <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
     <string name="daylight_header_pack_title">Header image pack</string>
+    <string name="daylight_header_pack_summary">Select header pack from a list of packages</string>
     <string name="status_bar_custom_header_shadow_title">Shadow header image</string>
     <string name="status_bar_custom_header_shadow_summary">For better visibility on bright images</string>
     <string name="static_header_provider" translatable="false">static</string>
@@ -532,8 +533,17 @@
     <string name="static_header_provider_title">Static</string>
     <string name="daylight_header_provider_title">Dynamic</string>
     <string name="custom_header_provider_title">Header provider</string>
+    <string name="custom_header_provider_summary">Choose method of header imaging</string>
     <string name="custom_header_browse_title">Browse installed headers</string>
     <string name="custom_header_browse_summary">Long press on any image to use for static mode</string>
+
+    <!-- Quick settings tiles columns and rows config -->
+    <string name="qs_layout_category">QS tiles layout</string>
+    <string name="qs_rows_portrait_title">Rows (portrait)</string>
+    <string name="qs_rows_landscape_title">Rows (landscape)</string>
+    <string name="qs_columns_title">Columns</string>
+    <string name="qqs_scroll_title">Scroll small QS tiles</string>
+    <string name="qqs_scroll_summary">Allow scrolling through the small QS tiles</string>
 
     <!-- Optional screenshot type -->
     <string name="screenshot_type_category">Screenshot</string>
@@ -701,14 +711,6 @@
     <string name="qs_date_time_center_title">Center Date and Time</string>
     <string name="qs_date_time_center_summary">Requires one or more icons to be disabled</string>
 
-    <!-- Quick settings tiles columns and rows config -->
-    <string name="qs_layout_category">QS tiles layout</string>
-    <string name="qs_rows_portrait_title">Rows (portrait)</string>
-    <string name="qs_rows_landscape_title">Rows (landscape)</string>
-    <string name="qs_columns_title">Columns</string>
-    <string name="qqs_scroll_title">Scroll small QS tiles</string>
-    <string name="qqs_scroll_summary">Allow scrolling through the small QS tiles</string>
-
     <!-- OmniJaws -->
     <string name="weather_config_title">Weather settings</string>
     <string name="weather_config_summary"></string>
@@ -737,20 +739,6 @@
     <!-- Recents memory bar -->
     <string name="systemui_recents_mem_display_title">Show memory bar</string>
     <string name="systemui_recents_mem_display_summary">Display RAM usage under recents view</string>
-
-    <!-- Header images -->
-    <string name="status_bar_custom_header_title">Custom header image</string>
-    <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
-    <string name="daylight_header_pack_title">Header image pack</string>
-    <string name="status_bar_custom_header_shadow_title">Header image shadow</string>
-    <string name="status_bar_custom_header_shadow_summary">For better visibility on bright images</string>
-    <string name="static_header_provider" translatable="false">static</string>
-    <string name="daylight_header_provider" translatable="false">daylight</string>
-    <string name="static_header_provider_title">Static</string>
-    <string name="daylight_header_provider_title">Dynamic</string>
-    <string name="custom_header_provider_title">Header provider</string>
-    <string name="custom_header_browse_title">Browse installed headers</string>
-    <string name="custom_header_browse_summary">Long press on any image to use for static mode</string>
 
     <!-- Status Bar Ticker -->
     <string name="ticker_screen_title">Ticker</string>

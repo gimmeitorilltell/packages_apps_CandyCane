@@ -192,6 +192,7 @@
         <ListPreference
             android:key="custom_header_provider"
             android:title="@string/custom_header_provider_title"
+            android:summary="@string/custom_header_provider_summary"
             android:persistent="false"
             android:entries="@array/custom_header_provider_entries"
             android:entryValues="@array/custom_header_provider_values"
@@ -200,6 +201,7 @@
         <ListPreference
             android:key="daylight_header_pack"
             android:title="@string/daylight_header_pack_title"
+            android:summary="@string/daylight_header_pack_summary"
             android:persistent="false"
             android:dependency="status_bar_custom_header" />
 
